@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="android_test_2.Views.Merchandises_EditPage">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="商品名稱" />
+            <Entry Placeholder="輸入商品名稱" Text="{Binding product_name}" />
+            <Label Text="價格" />
+            <Entry Keyboard="Numeric" Placeholder="輸入價格" Text="{Binding price}" />
+            <Label Text="排序(小到大)" />
+            <Entry Keyboard="Numeric" Placeholder="輸入權重" Text="{Binding sort}" />
+            <Grid Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Row="0" Grid.Column="0" x:Name="checkbox1" IsChecked="{Binding is_to_show}" />
+                <Label Grid.Row="0" Grid.Column="1" Text="是否顯示於選單" VerticalOptions="Center" />
+
+                <CheckBox Grid.Row="1" Grid.Column="0" x:Name="checkbox2" IsChecked="{Binding on_site_photo}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="是否現場拍設" VerticalOptions="Center"/>
+
+
+            </Grid>
+            <Label Text="備註" />
+            <Editor Placeholder="備註" Text="{Binding remarks}" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="存檔" Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1" Text="刪除" Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+            <Label Text="" />
+            <Label Text="" />
+            <Label Text="" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

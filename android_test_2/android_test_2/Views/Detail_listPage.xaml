@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="android_test_2.Views.Detail_listPage">
+
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="加商品" Clicked="OnSessionAddedClicked" />
+        
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listView"
+              Margin="10"
+              ItemSelected="OnListViewItemSelected"
+              HasUnevenRows="True"
+              >
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="5" Spacing="-1" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" TextColor="Black" Margin="0" FontSize="Medium" Text="{Binding product_name}" />
+                            <Label Grid.Column="1" VerticalTextAlignment="End" TextColor="OrangeRed" Margin="0" FontSize="Small" Text="{Binding show_description2}" />
+                        </Grid>
+                        <Label TextColor="Gray" Margin="0" FontSize="Small" Text="{Binding show_description}" />
+                    </StackLayout>
+
+                    <ViewCell.ContextActions>
+                        <ToolbarItem Clicked="Onhold_take_pic" CommandParameter="{Binding .}" Text="已拍" Order="Primary" />
+                        <!--MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="{Binding product_name}" /-->
+                        <MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="編輯" />
+                        <MenuItem Clicked="Onhold_delete" CommandParameter="{Binding .}" Text="刪除" />
+                    </ViewCell.ContextActions>
+                    
+                </ViewCell>
+                
+                <!--TextCell TextColor="Black" Text="{Binding product_name}"
+                          DetailColor="Gray" Detail="{Binding show_description}"
+                          >
+                    
+                    <TextCell.ContextActions>
+                        <ToolbarItem Text="e04e04e04" />
+                        <MenuItem Text="{Binding product_name}" />
+                        <MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="編輯" />
+                        <MenuItem Clicked="Onhold_delete" CommandParameter="{Binding .}" Text="刪除" />
+                        <MenuItem Clicked="Onhold_output" CommandParameter="{Binding .}" Text="匯出" />
+                    </TextCell.ContextActions>
+
+                </TextCell-->
+
+                
+                
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+
+
+
+
+</ContentPage>

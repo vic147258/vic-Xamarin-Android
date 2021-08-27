@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="android_test_2.Views.Session_EditPage"
+             Title="修改">
+
+
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="活動名稱" />
+            <Entry Placeholder="輸入活動名稱" Text="{Binding name_of_show}" />
+            <Label Text="地點" />
+            <Entry Placeholder="輸入地點" Text="{Binding location}" />
+            <Label Text="日期" />
+            <DatePicker Date="{Binding show_day}" />
+            <Label Text="備註" />
+            <Editor Placeholder="備註" Text="{Binding remarks}" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="存檔" Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1" Text="刪除" Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+            <Label Text="" />
+            <Label Text="" />
+            <Label Text="" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

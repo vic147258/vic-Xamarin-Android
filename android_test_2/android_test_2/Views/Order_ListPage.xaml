@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="android_test_2.Views.Order_ListPage">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="新增粉絲" Clicked="OnSessionAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+
+
+    <ListView x:Name="listView"
+              Margin="10"
+              ItemSelected="OnListViewItemSelected"
+              HasUnevenRows="True"
+               >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+
+
+                <ViewCell>
+                    <StackLayout Padding="5" Spacing="-1" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" TextColor="Black" Margin="0" FontSize="Medium" Text="{Binding nickname}" />
+                            <Label Grid.Column="1" VerticalTextAlignment="End" TextColor="OrangeRed" Margin="0" FontSize="Small" Text="{Binding show_state}" />
+                            <Label Grid.Column="2" VerticalTextAlignment="End" TextColor="Gray" Margin="0" FontSize="Small" Text="{Binding show_state2}" />
+                        </Grid>
+                        <Label TextColor="Gray" Margin="0" FontSize="Small" Text="{Binding count_of_detail, StringFormat='共 {0:d} 項商品'}" />
+                    </StackLayout>
+
+                    <ViewCell.ContextActions>
+                        <ToolbarItem Clicked="Onhold_pay_and_take" CommandParameter="{Binding .}" Text="付款" Order="Primary" />
+                        <ToolbarItem Clicked="Onhold_pay_and_take" CommandParameter="{Binding .}" Text="取貨" Order="Primary" />
+                        <!--MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="{Binding nickname}" /-->
+                        <MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="編輯" />
+                        <MenuItem Clicked="Onhold_delete" CommandParameter="{Binding .}" Text="刪除" />
+                    </ViewCell.ContextActions>
+
+                </ViewCell>
+
+                <!--TextCell TextColor="Black" Text="{Binding nickname}"
+                          DetailColor="Gray" Detail="{Binding count_of_detail, StringFormat='共 {0:d} 項商品'}"
+                          >
+                    <TextCell.ContextActions>
+                        <MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="{Binding nickname}" />
+                        <MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="編輯" />
+                        <MenuItem Clicked="Onhold_delete" CommandParameter="{Binding .}" Text="刪除" />
+                        <MenuItem Clicked="Onhold_output" CommandParameter="{Binding .}" Text="匯出" />
+                    </TextCell.ContextActions>
+                </TextCell-->
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

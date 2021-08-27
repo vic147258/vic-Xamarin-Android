@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="商品列表"
+             x:Class="android_test_2.Views.Merchandises_ListPage">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="新增" Clicked="OnSessionAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+
+
+    <ListView x:Name="listView"
+              Margin="10"
+              ItemSelected="OnListViewItemSelected"
+              HasUnevenRows="True"
+               >
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+
+                <ViewCell>
+                    <StackLayout Padding="5" Spacing="-1" >
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Grid.Column="0" TextColor="Black" Margin="0" FontSize="Medium" Text="{Binding product_name}" />
+                            <Label Grid.Column="1" TextColor="Black" Margin="0" FontSize="Small" Text="{Binding show_description2}" VerticalOptions="End" />
+                        </Grid>
+                        
+                        <Label TextColor="Gray" Margin="0" FontSize="Small" Text="{Binding show_description}" />
+                    </StackLayout>
+
+                    <!-- 指令 -->
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="{Binding product_name}" />
+                        <MenuItem Clicked="Onhold_edit" CommandParameter="{Binding .}" Text="編輯" />
+                        <MenuItem Clicked="Onhold_delete" CommandParameter="{Binding .}" Text="刪除" />
+                    </ViewCell.ContextActions>
+
+
+                </ViewCell>
+
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+
+
+
+</ContentPage>

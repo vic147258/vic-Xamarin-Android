@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="android_test_2.Views.Day_of_economic">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style x:Key="the_value" TargetType="Label" >
+                            <Setter Property="HorizontalOptions" Value="Center" />
+                            <Setter Property="VerticalOptions" Value="Center" />
+                            <Setter Property="FontSize" Value="Large" />
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Picker Grid.Row="0" x:Name="Picker1" Title="選擇場次" ItemDisplayBinding="{Binding name_of_show}" />
+                    <Picker Grid.Row="1" x:Name="Picker2" Title="選擇分潤商品" ItemDisplayBinding="{Binding product_name}" />
+
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Text="場次名稱" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="0" Grid.Row="1" x:Name="show_name" Text="-" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="1" Grid.Row="0" Text="分潤物品" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="1" Grid.Row="1" x:Name="Dividend_item" Text="-" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="2" Grid.Row="0" Text="收入總額" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="2" Grid.Row="1" x:Name="total_amount" Text="-" Style="{StaticResource the_value}" />
+                    </Grid>
+
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="2" Text="Kurumi" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="0" Grid.Row="3" x:Name="hime_Kurumi" Text="-" Style="{StaticResource the_value}" />
+
+                        <Label Grid.Column="1" Grid.Row="2" Text="Mika" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="1" Grid.Row="3" x:Name="hime_Mika" Text="-" Style="{StaticResource the_value}" />
+
+                        <Label Grid.Column="0" Grid.Row="4" Text="Youta" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="0" Grid.Row="5" x:Name="hime_Youta" Text="-" Style="{StaticResource the_value}" />
+
+                        <Label Grid.Column="1" Grid.Row="4" Text="Guagua" Style="{StaticResource the_value}" />
+                        <Label Grid.Column="1" Grid.Row="5" x:Name="hime_Guagua" Text="-" Style="{StaticResource the_value}" />
+
+
+                    </Grid>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

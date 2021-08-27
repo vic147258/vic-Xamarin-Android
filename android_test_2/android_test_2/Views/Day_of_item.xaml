@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="android_test_2.Views.Day_of_item">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout Margin="20">
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Picker Grid.Row="0" x:Name="Picker1" Title="選擇場次" ItemDisplayBinding="{Binding name_of_show}" />
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="場次名稱：" HorizontalTextAlignment="End" />
+                    <Label Grid.Column="1" x:Name="show_name" Text="(未選擇)" HorizontalTextAlignment="Start" />
+                </Grid>
+
+                <ListView Grid.Row="2" x:Name="listView1" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="5" Spacing="-1" >
+                                    <Label FontSize="Large" TextColor="Black" Text="{Binding product_name}" />
+                                    <Label FontSize="Medium" TextColor="Royalblue" Text="{Binding product_type}" />
+                                    <Label FontSize="Medium" TextColor="Royalblue" Text="{Binding all_quantity,StringFormat='數量 {0:d}'}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                </ListView>
+                
+                
+
+            </Grid>
+
+
+
+
+
+
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

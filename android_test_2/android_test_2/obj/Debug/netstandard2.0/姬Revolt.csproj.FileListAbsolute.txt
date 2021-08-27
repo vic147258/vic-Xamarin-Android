@@ -1,0 +1,17 @@
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\bin\Debug\netstandard2.0\姬Revolt.deps.json
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\bin\Debug\netstandard2.0\姬Revolt.dll
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\bin\Debug\netstandard2.0\姬Revolt.pdb
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\姬Revolt.csprojAssemblyReference.cache
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\姬Revolt.csproj.CoreCompileInputs.cache
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\姬Revolt.AssemblyInfoInputs.cache
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\姬Revolt.AssemblyInfo.cs
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\XamlC.stamp
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\姬Revolt.dll
+D:\code_vs2019\android_test_2\android_test_2\android_test_2\obj\Debug\netstandard2.0\姬Revolt.pdb
